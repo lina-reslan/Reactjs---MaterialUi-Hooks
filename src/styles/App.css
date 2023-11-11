@@ -1,0 +1,212 @@
+@font-face {
+  font-family: "poppins";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Poppins Regular"),
+    url("../assets/fonts/Poppins/Poppins-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "tajawal";
+  font-style: normal;
+  font-weight: normal;
+  src: local("tajawal Regular"),
+    url("../assets/fonts/Tajawal/Tajawal-Regular.woff") format("woff");
+}
+img {
+  max-width: 100%;
+}
+body,
+html,
+#root {
+  background-color: #eee;
+  height: 100% !important;
+  margin: 0px !important;
+  font-family: "poppins" !important;
+  line-height: 24px !important;
+  padding: 0px !important;
+  /* overflow-x: hidden;
+  overflow-y: auto; */
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+  -webkit-appearance: none;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 10px;
+  border: 2px solid rgba(68, 93, 119, 0.15);
+  height: 40px;
+}
+
+body::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #ffffff;
+  border: 1px solid #eee;
+}
+body:-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+#root::-webkit-scrollbar {
+  width: 12px;
+  -webkit-appearance: none;
+}
+
+#root::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 10px;
+  border: 2px solid rgba(68, 93, 119, 0.15);
+  height: 40px;
+}
+#root::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #ffffff;
+  border: 1px solid #eee;
+}
+#root::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 1920px) {
+  .MuiContainer-maxWidthXl {
+    max-width: 100% !important;
+  }
+}
+.tox-tinymce-aux {
+  z-index: 1 !important;
+}
+.MuiTab-fullWidth {
+  background-color: #1f627f !important;
+}
+.MuiPickerDTTabs-tabs {
+  background-color: #1f627f !important;
+}
+.MuiPickersBasePicker-containerLandscape {
+  flex-direction: column !important;
+}
+.MuiPickersDatePickerRoot-toolbar {
+  flex-direction: column !important;
+}
+.MuiPickersToolbar-toolbarLandscape {
+  max-width: 100% !important;
+}
+.MuiPickersToolbar-toolbar {
+  background-color: #1f627f !important;
+}
+.MuiPickersDay-daySelected {
+  background-color: #1f627f !important;
+}
+.MuiDialog-paperWidthMd {
+  min-width: 960px;
+}
+.MuiDialog-paperWidthSm {
+  max-width: 1500px !important;
+  background-color: #ffffff !important;
+}
+.MuiDialogContent-root > .MuiTabs-root {
+  margin-left: 40px !important;
+  top: 55px !important;
+  background-color: aqua;
+}
+.tox-tinymce-aux {
+  z-index: 1001 !important;
+}
+.muidialog-paper {
+  padding: 20px !important;
+}
+.MuiDialog-paperScrollPaper {
+  max-height: 100%;
+  min-height: 550px;
+}
+.MuiPickersTimePickerToolbar-ampmSelection {
+  margin-right: 0px !important;
+  margin-left: 0px !important;
+  
+}
+
+.swal2-container {
+  z-index: 5000 !important;
+}
+.swal2-title {
+  line-height: 35px;
+}
+.swal2-styled {
+  background-color: #1f627f !important;
+  font-family: poppins !important;
+  width: 100px !important;
+  height: 45px;
+}
+.swal2-styled.swal2-confirm {
+  background-color: white !important;
+  color: #146a99 !important;
+  border: 1px solid #146a99 !important;
+  width: 100px !important;
+  height: 45px;
+}
+.swal2-icon.swal2-warning {
+  border-color: #565656 !important;
+  color: #565656 !important;
+}
+
+.swal2-styled:focus {
+  box-shadow: 0 0 9px -1px rgb(100 150 200 / 50%) !important;
+}
+.MuiPaper-root > .MuiList-root > .Mui-selected {
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+.MuiPopover-root > .MuiPopover-paper {
+  box-shadow: 0px 5px 5px -3px rgb(0 0 0 / 20%),
+    0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%) !important;
+  width: 275px !important;
+}
+.MuiPaper-root {
+  box-shadow: none !important;
+}
+div.toolTip {
+  padding-top: 10px;
+  font-size: 14px;
+  display: flex;
+}
+div.toolTipData {
+  font-weight: 600 !important;
+}
+a.updateLink {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+svg.updateIcon {
+  color: #1f627f;
+  font-size: 20px;
+}
+.MuiMenuItem-root {
+  font-family: "poppins";
+}
+.MuiPopover-root > .MuiPopover-paper > ul > li {
+  width: 100%;
+  overflow: hidden;
+  white-space: break-spaces;
+}
+.MuiDialog-paperScrollPaper {
+  min-height: 200px;
+  font-family: "poppins";
+}
+.MuiDialog-container
+  > .MuiPaper-root
+  > .MuiDialogTitle-root
+  > .MuiTypography-root {
+  font-family: "poppins";
+}
+.MuiDialog-container > .MuiPaper-root > .MuiDialogTitle-root {
+  border-bottom: 1px solid #ccc;
+}
+.MuiDialog-container
+  > .MuiPaper-root
+  > .MuiDialogContent-root
+  > .MuiTypography-body1 {
+  font-family: "poppins";
+}
+.MuiDialog-container > .MuiPaper-root > .MuiDialogContent-root {
+  overflow: hidden;
+}
