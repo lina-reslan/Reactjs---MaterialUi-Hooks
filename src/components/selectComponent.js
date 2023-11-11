@@ -32,28 +32,21 @@ const names = [
   'Kelly Snyder',
 ];
 
-// function getStyles(name: string, personName: readonly string[], theme: Theme) {
-//   return {
-//     fontWeight:
-//       personName.indexOf(name) === -1
-//         ? theme.typography.fontWeightRegular
-//         : theme.typography.fontWeightMedium,
-//   };
-// }
 
-export default function MultipleSelectPlaceholder() {
+
+export default function SelectComponent(props) {
   const theme = useTheme();
-  const [personName, setPersonName] = useState([]);
+  const [country, setCountry] = useState("");
 
-  const handleChange = (event) => {
-    const {
-      target: { value },
-    } = event;
-    setPersonName(
-      // On autofill we get a stringified value.
-      typeof value === 'string' ? value.split(',') : value,
-    );
-  };
+//   const handleChange = (event) => {
+//     const {
+//       target: { value },
+//     } = event;
+//     setCountryName(
+//       // On autofill we get a stringified value.
+//       typeof value === 'string' ? value.split(',') : value,
+//     );
+//   };
 
   const useStyles = makeStyles((theme) => ({
     selectComponent:{
@@ -65,6 +58,7 @@ export default function MultipleSelectPlaceholder() {
             fontSize: 16,
             borderRadius:"28px",
             marginTop: "17px",
+            backgroundColor:"#fff",
             "& svg":{
                 right:"10px"
             },
@@ -97,18 +91,19 @@ const classes = useStyles();
                     Country
                 </InputLabel>
         <Select
-          multiple
           displayEmpty
-          value={personName}
-          onChange={handleChange}
+          value={props.value}
+        //   onChange={handleChange}
+        onChange={props.onChange}
           input={<OutlinedInput />}
-          renderValue={(selected) => {
-            if (selected.length === 0) {
-              return <span>Enter Country</span>;
-            }
+          placeholder="Enter Countery"
+        //   renderValue={(selected) => {
+        //     if (selected.length === 0) {
+        //       return <span>Enter Country</span>;
+        //     }
 
-            return selected.join(', ');
-          }}
+        //     return selected.join(', ');
+        //   }}
           MenuProps={MenuProps}
           inputProps={{ 'aria-label': 'Without label' }}
         >

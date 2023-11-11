@@ -10,6 +10,17 @@ import SelectComponent from "../../components/selectComponent";
 export const BuyDomin = (props) => {
 
     const [firstName,setFirstName] = useState("");
+    const [lastName,setLastName] = useState("");
+    const [companyName,setCompanyName] = useState("");
+    const [email,setEmail] = useState("");
+    const [firstAddress,setFirstAddress] = useState("");
+    const [SecondAddress,setSecondAddress] = useState("");
+    const [city,setCity] = useState("");
+    const [zipCode,setZipCode] = useState("");
+    const [state,setState] = useState("");
+    const [phoneNumber,setPhoneNumber] = useState("");
+    const [country, setCountry] = useState("");
+    
 
     const useStyles = makeStyles((theme) => ({
         buyDomin:{
@@ -26,11 +37,7 @@ export const BuyDomin = (props) => {
     }));
     const classes = useStyles();
 
-    const handelChangFirstName =(e)=>{
-        setFirstName(e.target.value);
-        console.log("first name",firstName);
-
-    }
+    
 
     return(
         <Container maxWidth="xl">
@@ -45,37 +52,83 @@ export const BuyDomin = (props) => {
                     <CustomizedInputsStyled 
                     name="firstName" 
                     placeholder="Enter First Name"
-                    onChange = {(e) => handelChangFirstName(e)}
+                    onChange = {(e) => {setFirstName(e.target.value)}}
                       />
-                    <CustomizedInputsStyled name="Company Name" placeholder="Enter Company Name"/>
+                    <CustomizedInputsStyled
+                     name="Company Name"
+                      placeholder="Enter Company Name"
+                      onChange = {(e) => {setCompanyName(e.target.value)}}
+                      />
                 </Grid>
                 <Grid item xs={2}></Grid>
                 <Grid item xs={5}>
-                    <CustomizedInputsStyled name="Last Name" placeholder="Enter Last Name"/>
-                    <CustomizedInputsStyled name="Email" placeholder="Enter Email"/>
+                    <CustomizedInputsStyled
+                     name="Last Name" 
+                     placeholder="Enter Last Name"
+                     onChange = {(e) => {setLastName(e.target.value)}}
+                     />
+                    <CustomizedInputsStyled
+                     name="Email"
+                      placeholder="Enter Email"
+                      onChange = {(e) => {setEmail(e.target.value)}}
+                      />
                 </Grid>
                 <Grid item xs={12}>
-                  <CustomizedInputsStyled name="Adress Line1" placeholder="Enter Address Line1"/>
+                  <CustomizedInputsStyled
+                   name="Adress Line1"
+                    placeholder="Enter Address Line1"
+                    onChange = {(e) => {setFirstAddress(e.target.value)}}
+                    />
                 </Grid>
                 <Grid item xs={12}>
-                  <CustomizedInputsStyled name="Adress Line1" placeholder="Enter Address Line1"/>
+                  <CustomizedInputsStyled
+                   name="Adress Line1"
+                    placeholder="Enter Address Line1"
+                    onChange = {(e) => {setSecondAddress(e.target.value)}}
+                    />
                 </Grid>
                 <Grid item xs={5}>
-                    <CustomizedInputsStyled name="City" placeholder="Enter City"/>
-                    <CustomizedInputsStyled name="Zip Code" placeholder="Enter Zip Code"/>
+                    <CustomizedInputsStyled
+                     name="City"
+                      placeholder="Enter City"
+                      onChange = {(e) => {setCity(e.target.value)}}
+                      />
+                    <CustomizedInputsStyled 
+                    name="Zip Code"
+                     placeholder="Enter Zip Code"
+                     onChange = {(e) => {setZipCode(e.target.value)}}
+                     />
                 </Grid>
                 <Grid item xs={2}></Grid>
                 <Grid item xs={5}>
-                    <CustomizedInputsStyled name="State" placeholder="Enter State"/>
-                    <CustomizedInputsStyled name="Phone Number" placeholder="Enter Phone Number"/>
+                    <CustomizedInputsStyled
+                     name="State" 
+                     placeholder="Enter State"
+                     onChange = {(e) => {setState(e.target.value)}}
+                     />
+                    <CustomizedInputsStyled
+                     name="Phone Number"
+                      placeholder="Enter Phone Number"
+                      onChange = {(e) => {setPhoneNumber(e.target.value)}}
+                      
+                      />
                 </Grid>
              
                 <Grid item xs={12}>
                   {/* <CustomizedInputsStyled name="Country" placeholder="Enter Country"/> */}
-                  <SelectComponent />
+                  <SelectComponent 
+                  value={country} 
+                  onChange = {(e) => {setCountry(e.target.value)}}
+
+                  />
                 </Grid>
                 <Box className={classes.buyNow}>
-                <Button variant="contained">Buy Now</Button>
+                <Button 
+                variant="contained"
+                onClick={
+                    console.log("information", [firstName,lastName,country,city,phoneNumber,zipCode,email])
+                }
+                >Buy Now</Button>
                 </Box>
                   
                 
